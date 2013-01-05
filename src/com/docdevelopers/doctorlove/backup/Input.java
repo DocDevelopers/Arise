@@ -58,13 +58,7 @@ String man,girl,name_one,name_two;
     public void onClick(View v) {
     	
     //Nothing in here dirty code.
-        //Testing Github
-    	//This is aaaaa
-    	//fgfgfgefger
-    	//loreum Ipsum
-    	//This is a third and last test.
-    	//Test From Workstation
-    	//Test from laptop
+        //Test Github Here
     	}
     
     
