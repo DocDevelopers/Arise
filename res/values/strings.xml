@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+<string name="app_name">Doctor Love</string>
+<color name="light">#D3D3D3</color>
+<color name="white">#FFFFFF</color>
+<string name="hint">Enter Name:</string>
+<string name="percent">0%</string>
+<string name="dedicated">This APP is dedicated to Jaila Satchell.&lt;3</string>
+    <string name="lovemessage">This </string>
+    <string name="title">What Should You Do?</string>
+    <string name="boxtitle">Enter Your Name:</string>
+     <string name="boxtitle2">Enter Your Lovers Name:</string>
+  
+    <string name="updates">Facebook Integration Coming This Week!!!</string>
+    <color name="Yellow">#FFE303</color>
+    <string name="title_activity_input">Input</string>
+    <string name="splash">Doctor Love</string>
+    <string name="results">Results Activity</string>
+    
+</resources>
