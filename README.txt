@@ -2,7 +2,7 @@ Application Title: Doctor Love
 Author: Francisco Castellanos
 Language: Java
 Platform: Android(4.1)
-Rev:3.0
+Rev:5.0
 
 Description:
 Doctor Love is a love calculator which takes in two names and generates a random number.
