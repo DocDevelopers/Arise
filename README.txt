@@ -1,7 +1,7 @@
 Application Title: Doctor Love
-Author: Francisco Castellanos
+Author(s): Francisco Castellanos(Code),Michel Castellanos(Graphics)
 Language: Java
-Platform: Android(4.1)
+Platform: Android(4.2.1)
 Rev:5.0
 
 Description:
