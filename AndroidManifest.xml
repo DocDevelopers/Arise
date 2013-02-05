@@ -35,7 +35,7 @@
                    android:screenOrientation="portrait">
                    
         </activity>
-        <activity android:name="DemoMySqlPhpActivity" android:label="@string/app_name">
+        <activity android:name="com.docdevelopers.doctorlove.backup.pickupLines" android:label="@string/app_name">
             
               <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

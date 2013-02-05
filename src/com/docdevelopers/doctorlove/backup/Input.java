@@ -60,7 +60,7 @@ String man,girl,name_one,name_two;
         lines.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-            	Intent pickup = new Intent(Input.this, DemoMySqlPhpActivity.class);
+            	Intent pickup = new Intent(Input.this, pickupLines.class);
         		startActivity(pickup);
             }});
     }

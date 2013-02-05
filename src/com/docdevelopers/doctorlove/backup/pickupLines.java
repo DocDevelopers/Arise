@@ -33,7 +33,7 @@ import android.widget.Toast;
  * author firzan
  * 
  */
-public class DemoMySqlPhpActivity extends Activity {
+public class pickupLines extends Activity {
 	JSONArray jArray;
 	String result = null;
 	InputStream is = null;
@@ -78,7 +78,7 @@ public class DemoMySqlPhpActivity extends Activity {
 		@Override
 		// can use UI thread here
 		protected void onPreExecute() {
-		this.progressDialog = ProgressDialog.show(DemoMySqlPhpActivity.this, ""," Loading...");  
+		this.progressDialog = ProgressDialog.show(pickupLines.this, ""," Loading...");  
 		}
 		@Override
 		protected void onPostExecute(final Void unused) {  
@@ -86,7 +86,7 @@ public class DemoMySqlPhpActivity extends Activity {
 			try{
 	 				 ListView listview = (ListView) findViewById(R.id.listView1);  
 	 				this.progressDialog.dismiss();	
-				     listview.setAdapter(new DataAdapter(DemoMySqlPhpActivity.this,al.toArray(new String[al.size()]),al1.toArray(new String[al1.size()])));
+				     listview.setAdapter(new DataAdapter(pickupLines.this,al.toArray(new String[al.size()]),al1.toArray(new String[al1.size()])));
 				     
 				}
 	 			catch(Exception e){
