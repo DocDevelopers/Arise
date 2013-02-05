@@ -69,6 +69,11 @@
         android:singleLine="true" />
     <!-- Second Box -->
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left" 
+    android:layout_gravity="center">
 
     <!-- Calculate Button -->
 
@@ -78,7 +83,18 @@
         android:layout_height="78dp"
         android:layout_marginTop="35dp"
         android:background="@drawable/heartbutton" />
+    
+    
 
     <!-- Calculate Button -->
-
+    
+    
+    <Button
+        android:id="@+id/lines_button"
+        android:layout_width="112dp"
+        android:layout_height="78dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="35dp"
+        />
+</RelativeLayout>
 </LinearLayout>

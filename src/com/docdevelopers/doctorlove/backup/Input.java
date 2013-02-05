@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 public class Input extends Activity implements OnClickListener {
 //Variables 
-Button calculate;
+Button calculate,lines;
 EditText first,second;
 String man,girl,name_one,name_two;
 
@@ -29,13 +29,17 @@ String man,girl,name_one,name_two;
         setContentView(R.layout.input);
         //Heart Button
         calculate = (Button) findViewById(R.id.heart_button);
+        lines = (Button) findViewById(R.id.lines_button);
         first= (EditText) findViewById(R.id.First_name);
         second = (EditText) findViewById(R.id.second_name);
       
        
 
+       
+        
+        
         //Listen for click
-        calculate.setOnClickListener(
+       /* calculate.setOnClickListener(
                 new View.OnClickListener()
                 {
                     public void onClick(View view)
@@ -49,22 +53,36 @@ String man,girl,name_one,name_two;
                         activity();
                     }
                 });
+        */
         
         
+        
+        lines.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            	Intent pickup = new Intent(Input.this, DemoMySqlPhpActivity.class);
+        		startActivity(pickup);
+            }});
     }
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
+	}
         
    
 
-    public void onClick(View v) {
+    /*public void onClick(View v) {
     	
     //Nothing in here dirty code.
         //Test Github Here
     	}
+    */
     
-    
-    
+   
 
-public void activity(){
+/*public void activity(){
 	if(first.getText().toString().equals("")|| name_two.equals("")){
 		Toast.makeText(getApplicationContext(), "Please Fill in Both Boxes", Toast.LENGTH_SHORT).show();
     }
@@ -75,6 +93,6 @@ public void activity(){
 
 	startActivity(myIntent);
 	}
-	}
+	}*/
     
 }
