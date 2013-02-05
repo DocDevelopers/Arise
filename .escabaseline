@@ -1,0 +1,74 @@
+# Enerjy Software baseline data (files=5, problems=68).
+path: /Arise/gen/com/docdevelopers/doctorlove/backup/BuildConfig.java
+problem: JAVA0014:JAVA0014 Class 'BuildConfig' with only static members has non-private constructor
+problem: JAVA0068:JAVA0068 Modifiers not declared in recommended order
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'DEBUG'
+path: /Arise/gen/com/docdevelopers/doctorlove/backup/R.java
+problem: JAVA0014:JAVA0014 Class 'R' with only static members has non-private constructor
+problem: JAVA0024:JAVA0024 Empty class 'attr'
+problem: JAVA0014:JAVA0014 Class 'color' with only static members has non-private constructor
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'Yellow'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'light'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'white'
+problem: JAVA0014:JAVA0014 Class 'drawable' with only static members has non-private constructor
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'doctor_love'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'empty_heart'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'heart'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'heart_roll'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'heartbutton'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'heartchance'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'helpbut'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'ic_action_search'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'ic_launcher'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'logo'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'retry'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'retry_design'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'retry_roll'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'why'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'why_roll'
+problem: JAVA0014:JAVA0014 Class 'id' with only static members has non-private constructor
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'First_name'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'TextView01'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'heart_button'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'heart_logo'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'heartpercent'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'retry'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'second_name'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'updates'
+problem: JAVA0014:JAVA0014 Class 'layout' with only static members has non-private constructor
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'input'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'result'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'splash'
+problem: JAVA0014:JAVA0014 Class 'string' with only static members has non-private constructor
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'app_name'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'boxtitle'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'boxtitle2'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'dedicated'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'hint'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'lovemessage'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'percent'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'results'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'splash'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'title'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'title_activity_input'
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'updates'
+problem: JAVA0014:JAVA0014 Class 'style' with only static members has non-private constructor
+problem: JAVA0116:JAVA0116 Missing javadoc: field 'AppTheme'
+path: /Arise/src/com/docdevelopers/doctorlove/backup/Input.java
+problem: JAVA0005:JAVA0005 Imports not in specified order
+problem: JAVA0137:JAVA0137 Non-abstract class 'Input' missing constructor
+problem: JAVA0098:JAVA0098 Minimize use of implicit field initializers
+problem: JAVA0117:JAVA0117 Missing javadoc: method 'activity'
+path: /Arise/src/com/docdevelopers/doctorlove/backup/Splash.java
+problem: JAVA0020:JAVA0020 Field name '_active' does not have required form: (<uppercase>|<lowercase>)(<uppercase>|<lowercase>|<underscore>|<digit>)*
+problem: JAVA0020:JAVA0020 Field name '_splashTime' does not have required form: (<uppercase>|<lowercase>)(<uppercase>|<lowercase>|<underscore>|<digit>)*
+problem: JAVA0076:JAVA0076 Use of magic number '100'
+problem: JAVA0076:JAVA0076 Use of magic number '100'
+path: /Arise/src/com/docdevelopers/doctorlove/backup/results.java
+problem: JAVA0005:JAVA0005 Imports not in specified order
+problem: JAVA0137:JAVA0137 Non-abstract class 'results' missing constructor
+problem: JAVA0179:JAVA0179 Local variable 'retry' hides visible field
+problem: JAVA0076:JAVA0076 Use of magic number '100'
+problem: JAVA0076:JAVA0076 Use of magic number '100'
+problem: JAVA0076:JAVA0076 Use of magic number '100'
+problem: JAVA0117:JAVA0117 Missing javadoc: method 'activity'

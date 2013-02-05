@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"  
+    android:orientation="vertical" 
+    android:background="@color/light"
+    android:weightSum="1" >
+    <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout2" android:weightSum="1" android:background="#000000" android:layout_height="28dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Line" android:layout_gravity="left" android:textAppearance="?android:attr/textAppearanceSmall" android:paddingTop="5dp" android:id="@+id/month" android:layout_weight="0.48" android:paddingLeft="10dp" android:textColor="#FFF"></TextView>
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Author" android:layout_gravity="center" android:textAppearance="?android:attr/textAppearanceSmall" android:paddingTop="5dp" android:id="@+id/year" android:layout_weight="0.36" android:textColor="#FFF"></TextView>
+        
+    </LinearLayout>
+    <!-- 
+    	<GridView android:layout_height="wrap_content" 
+    			android:id="@+id/gridView1" 
+    			android:layout_width="match_parent" 
+    			android:scrollbars="horizontal" 
+    			android:smoothScrollbar="true" 
+    			android:layout_gravity="fill_vertical" 
+    			android:numColumns="1" style="@style/ButtonText">
+    	</GridView> 
+    -->
+    <ListView android:layout_height="wrap_content" android:id="@+id/listView1" android:layout_width="match_parent" android:background="#FFF"></ListView>
+    
+    
+    
+</LinearLayout>
+ 
