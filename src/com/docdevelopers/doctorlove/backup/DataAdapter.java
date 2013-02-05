@@ -7,6 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView; 
 public class DataAdapter extends BaseAdapter {
 	Context mContext; 
+	
 	private LayoutInflater mInflater;
 	String targetmonth;
 	String targetyear;
@@ -51,6 +52,7 @@ public class DataAdapter extends BaseAdapter {
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			//WTF
 			e.printStackTrace();
 		} 
 		return convertView;
