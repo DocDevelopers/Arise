@@ -2,24 +2,33 @@
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="fill_parent"
+  android:paddingRight="10dp"
+  android:paddingLeft = "10dp"
+  android:layout_marginTop="50dp"
   android:layout_height="fill_parent"
   android:orientation="vertical"
+  android:clickable="false"
   android:gravity="center|center_vertical"
-   android:background="@color/light">
+   android:background="@drawable/contain_drop"
+   android:layout_gravity="center_vertical">
  
      
       
-           <TextView android:layout_width="200dp" android:text="hello" android:layout_height="wrap_content" android:id="@+id/line" 
-               android:paddingBottom="5dp" android:paddingRight="5dp" android:paddingTop="5dp" android:layout_gravity="center" android:layout_weight="0.32" 
-               android:gravity="center" android:paddingLeft="10dp" android:textColor="#ab330b"></TextView>
+           <TextView android:layout_width="fill_parent" android:text="Line" android:layout_height="wrap_content" android:id="@+id/line" 
+               android:paddingBottom="5dp" android:paddingRight="5dp"    android:textSize="35sp"  android:layout_marginTop="15dp"         android:paddingTop="5dp" android:layout_gravity="center" android:layout_weight="0.32" 
+               android:gravity="center" android:paddingLeft="10dp" android:textColor="#000"></TextView>
           
            
             
          
-           <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:text="hello" android:layout_height="wrap_content" 
-               android:id="@+id/author" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="5dp" android:paddingBottom="5dp" 
-               android:gravity="left" android:layout_weight="0.29" android:textColor="#0E8C3A"></TextView>
-         
-      
-
+           <TextView android:layout_gravity="left" android:layout_width="wrap_content" android:text="Author" android:layout_height="wrap_content" 
+               android:id="@+id/author" android:paddingLeft="20dp" android:paddingRight="5dp" android:paddingTop="5dp" android:paddingBottom="5dp" 
+               android:gravity="left" android:layout_weight="0.29" android:textColor="#696969"></TextView>
+    
+  <TextView android:layout_gravity="left" android:layout_width="wrap_content" android:text="Date" android:layout_height="wrap_content" 
+               android:id="@+id/date" android:paddingLeft="20dp" android:paddingRight="5dp" android:paddingTop="5dp" android:paddingBottom="5dp" 
+               android:gravity="left" android:layout_weight="0.29" android:textColor="#696969"></TextView>
+  <TextView android:layout_gravity="right" android:layout_width="wrap_content" android:text="Likes" android:layout_height="wrap_content" 
+               android:id="@+id/likes" android:paddingLeft="20dp" android:paddingRight="5dp" android:paddingTop="5dp" android:paddingBottom="5dp" 
+               android:gravity="left" android:layout_weight="0.29" android:textColor="#696969"></TextView>
 </LinearLayout>

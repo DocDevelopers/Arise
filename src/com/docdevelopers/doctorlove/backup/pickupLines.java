@@ -26,29 +26,45 @@ import android.net.NetworkInfo;
 import android.net.ParseException;
 import android.os.AsyncTask;
 import android.os.Bundle;  
+import android.widget.Button;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
-
 /*
- * author firzan
+ * By: Francisco Castellanos
  * 
  */
-public class pickupLines extends Activity {
+public class pickupLines extends Activity implements OnClickListener {
+	
+	//Variables
+	Random generator = new Random();
 	JSONArray jArray;
 	String result = null;
 	InputStream is = null;
 	StringBuilder sb = null; 
 	ArrayList<String> al = new ArrayList<String>();
 	ArrayList<String> al1 = new ArrayList<String>();
-	Random generator = new Random();
-	
-	String line;
-	String author;
+	ArrayList<String> adate = new ArrayList<String>();
+	ArrayList<String> alikes = new ArrayList<String>();
+	Button refresh;
+	String line,author,date,likes;
+	AlertDialog.Builder fc=new AlertDialog.Builder(this);
 	int responseCode;
+	
+	
+	
+	
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.demo);
+		Button refresh = (Button) findViewById(R.id.refresh);
+		
+		refresh.setOnClickListener(this);
+		
+		
 		setTitle("Pick up line of the day");  
 		try {
 			URL url = new URL("http://pickup.docdevelopers.com/linepull.php");
@@ -71,10 +87,20 @@ public class pickupLines extends Activity {
 		catch(Exception e){
 			
 		}
+		
+		
 	}
 	
+	public void onClick(View v){
+		 al.remove(line); 
+		 al1.remove(author);
+		LoadData connectedTask = new LoadData();
+	    connectedTask.execute();
+	}
+	//Problem Here
 	private class LoadData extends AsyncTask<Void, Void, Void> { 
 		private ProgressDialog progressDialog;  
+		
 		@Override
 		// can use UI thread here
 		protected void onPreExecute() {
@@ -86,7 +112,11 @@ public class pickupLines extends Activity {
 			try{
 	 				 ListView listview = (ListView) findViewById(R.id.listView1);  
 	 				this.progressDialog.dismiss();	
-				     listview.setAdapter(new DataAdapter(pickupLines.this,al.toArray(new String[al.size()]),al1.toArray(new String[al1.size()])));
+	 				fc.create();
+	 				fc.setMessage(author);
+	 				fc.show();
+				    // listview.setAdapter(new DataAdapter(pickupLines.this, al.toArray(new String[al.size()]),al1.toArray(new String[adate.size()]),
+				    		// adate.toArray(new String[adate.size()]),alikes.toArray(new String[alikes.size()])));
 				     
 				}
 	 			catch(Exception e){
@@ -140,9 +170,12 @@ public class pickupLines extends Activity {
 							json_data = jArray.getJSONObject(which); 
 							line=json_data.getString("line");
 							author=json_data.getString("author");
+							date = json_data.getString("DATE_FORMAT(created,'%m/%d/%Y')");
+							likes = json_data.getString("likes");
 							al.add(line); 
 							al1.add(author);
-							 
+							adate.add(date);
+							alikes.add(likes);
 						
 					}
 					catch(JSONException e){
@@ -175,5 +208,16 @@ public class pickupLines extends Activity {
 		}
 		// Log.i("net status:", "offline...!!!");
 		return false;
+	}
+	
+	@Override
+	public void onStop()
+	{
+	    super.onStop();
+	    al.remove(line); 
+		al1.remove(author);
+	    LoadData connectedTask = new LoadData();
+	    connectedTask.execute();
+	    
 	}
 }
