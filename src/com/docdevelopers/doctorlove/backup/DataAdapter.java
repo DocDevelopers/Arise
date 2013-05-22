@@ -1,5 +1,4 @@
 package com.docdevelopers.doctorlove.backup; 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,15 +10,14 @@ public class DataAdapter extends BaseAdapter {
 	
 	private LayoutInflater mInflater;
 	
-	String[] line;
-	String[] author;
-	String[] date;
-	String[] likes;
-	public DataAdapter(Context c, String[] line, String[] author,String[] date,String[] likes) {
+	
+	String[] line,author,date;
+	
+
+	public DataAdapter(Context c, String[] line, String[] author, String[] date) {
 		this.line = line;
 		this.author = author; 
 		this.date = date;
-		this.likes = likes;
 		mContext = c;
 		mInflater = LayoutInflater.from(c); 
 	} 
@@ -37,10 +35,10 @@ public class DataAdapter extends BaseAdapter {
 		if (convertView == null) {
 			convertView = mInflater.inflate(R.layout.customgrid, parent, false);
 			holder = new ViewHolder();
-			holder.line = (TextView) convertView.findViewById(R.id.line); 
+			holder.line = (TextView) convertView
+					.findViewById(R.id.line); 
 			holder.author = (TextView) convertView.findViewById(R.id.author); 
 			holder.date = (TextView) convertView.findViewById(R.id.date);
-			holder.like = (TextView) convertView.findViewById(R.id.likes);
 			if (position == 0) {
 				convertView.setTag(holder);
 			}
@@ -52,10 +50,7 @@ public class DataAdapter extends BaseAdapter {
 
 			holder.line.setText(line[position]);
 			holder.author.setText("By:"+author[position]);
-			holder.date.setText("Submitted On:"+date[position]);
-			holder.like.setText("Likes:"+likes[position]);
-		
-
+			holder.date.setText("Posted On:"+date[position]);
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -65,9 +60,7 @@ public class DataAdapter extends BaseAdapter {
 		return convertView;
 	} 
 	static class ViewHolder {
-	
-		TextView line,author, date,like; 
+		TextView line,author,date; 
 	}
 
 }
-
