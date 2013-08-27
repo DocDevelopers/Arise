@@ -30,8 +30,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 /*
- * author firzan
- * 
+	Doctor Love By Francisco Castellanos
  */
 public class pickupLines extends Activity {
 	JSONArray jArray;
@@ -52,22 +51,32 @@ public class pickupLines extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.demo);
 		setTitle("Pick up line of the day");  
+		
+		
 		try {
+			//open http connection
 			URL url = new URL("http://pickup.docdevelopers.com/linepull.php");
 			URLConnection connection = url.openConnection();
 			connection.setConnectTimeout(5000);
 			HttpURLConnection httpConnection = (HttpURLConnection) url.openConnection();
-			responseCode = httpConnection.getResponseCode();
 		} 
-	catch (Exception e) {} 
+		
+		catch (Exception e) {
+			
+			
+		} 
+		
 		try{
+			//check internet 
 			if(isNetworkAvailable()==true ){
 				new LoadData().execute();
 			}
 			else{
-				AlertDialog.Builder ad=new AlertDialog.Builder(this);
-				ad.setMessage("Check your internet connection");
-				ad.show();
+				
+				//Show error Dialog
+				AlertDialog.Builder alert = new AlertDialog.Builder(this);
+				alert.setMessage("Check your internet connection");
+				alert.show();
 			}
 		}
 		catch(Exception e){
@@ -76,23 +85,29 @@ public class pickupLines extends Activity {
 	}
 	
 	private class LoadData extends AsyncTask<Void, Void, Void> { 
+		
 		private ProgressDialog progressDialog;  
 		@Override
 		// can use UI thread here
 		protected void onPreExecute() {
-		this.progressDialog = ProgressDialog.show(pickupLines.this, ""," Loading...");  
+			
+			this.progressDialog = ProgressDialog.show(pickupLines.this, "","Fetching Pickup line...");  
 		}
 		@Override
+		
 		protected void onPostExecute(final Void unused) {  
-			 this.progressDialog.dismiss();	
+				
 			try{
-	 				 ListView listview = (ListView) findViewById(R.id.listView1);  
-	 				this.progressDialog.dismiss();	
-				     listview.setAdapter(new DataAdapter(pickupLines.this,al.toArray(new String[al.size()]), al1.toArray(new String[al1.size()]), adate.toArray(new String[adate.size()])));
+					//Find Listview
+	 				ListView listview = (ListView) findViewById(R.id.listView1);  
+	 				//Hide progress dialog
+	 				this.progressDialog.dismiss();
+	 				//set adapter
+				    listview.setAdapter(new DataAdapter(pickupLines.this,al.toArray(new String[al.size()]), al1.toArray(new String[al1.size()]), adate.toArray(new String[adate.size()])));
 				     
 				}
 	 			catch(Exception e){
-	 				
+	 				//If something goes wrong
 	 				Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
 	 			} 
 	 			
@@ -107,30 +122,35 @@ public class pickupLines extends Activity {
 						
 						ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 						HttpClient httpclient = new DefaultHttpClient(); 
-						try{
-						HttpPost httppost = new HttpPost("http://pickup.docdevelopers.com/linepull.php");
-						httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-						HttpResponse response = httpclient.execute(httppost);
-						HttpEntity entity = response.getEntity();
-						is = entity.getContent();
 						
+						
+						try{
+							HttpPost httppost = new HttpPost("http://pickup.docdevelopers.com/linepull.php");
+							httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+							HttpResponse response = httpclient.execute(httppost);
+							HttpEntity entity = response.getEntity();
+							is = entity.getContent();
 						}
+						
 						catch(Exception e){
 							Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
 						}
+						
 						//buffered reader
 						try{
-						BufferedReader reader = new BufferedReader(new InputStreamReader(
-								is, "iso-8859-1"), 80);
-						sb = new StringBuilder();
-						sb.append(reader.readLine() + "\n");
-						String line = "0";
-						while ((line = reader.readLine()) != null) {
+							BufferedReader reader = new BufferedReader(new InputStreamReader(is, "iso-8859-1"), 80);
+							sb = new StringBuilder();
+							sb.append(reader.readLine() + "\n");
+							String line = "0";
+						
+							while ((line = reader.readLine()) != null) {
 							sb.append(line + "\n");
+							}
+							is.close();
+							result = sb.toString();
 						}
-						is.close();
-						result = sb.toString();
-						}
+						
+						
 						catch(Exception e){
 							Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
 						}
@@ -165,7 +185,9 @@ public class pickupLines extends Activity {
 	 
 		}
 	}
- 
+	
+	
+	//Returns the network status. True if you have connection. False if you have no connection
 	public boolean isNetworkAvailable() {
 		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo networkInfo = cm.getActiveNetworkInfo();
