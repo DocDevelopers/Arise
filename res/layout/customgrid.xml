@@ -11,20 +11,58 @@
       
          
           
-            <TextView android:layout_width="fill_parent" android:text="Line" android:layout_height="wrap_content" android:id="@+id/line" 
-               android:paddingBottom="5dp" android:paddingRight="5dp"    android:textSize="35sp"  android:layout_marginTop="15dp"         android:paddingTop="5dp" android:layout_gravity="center" android:layout_weight="0.32" 
-               android:gravity="center" android:paddingLeft="10dp" android:textColor="#000"></TextView>
+            <TextView 
+                android:layout_width="fill_parent" 
+                android:text="Line" 
+                android:layout_height="wrap_content"
+                android:id="@+id/line" 
+                android:paddingBottom="5dp" 
+                android:paddingRight="5dp"    
+                android:textSize="35sp"  
+                android:layout_marginTop="15dp"         
+                android:paddingTop="5dp" 
+                android:layout_gravity="center" 
+                android:layout_weight="0.32" 
+                android:gravity="center" 
+                android:paddingLeft="10dp" 
+                android:textColor="#000">
+                
+            </TextView>
             
          
            
          
        
-           <TextView android:layout_gravity="left" android:layout_width="wrap_content" android:text="Author" android:layout_height="wrap_content" 
-               android:id="@+id/author" android:paddingLeft="20dp" android:paddingRight="5dp" android:paddingTop="5dp" android:paddingBottom="5dp" 
-               android:gravity="left" android:layout_weight="0.29" android:textColor="#696969"></TextView>
+           <TextView 
+               android:layout_gravity="left" 
+               android:layout_width="wrap_content" 
+               android:text="Author" 
+               android:layout_height="wrap_content" 
+               android:id="@+id/author" 
+               android:paddingLeft="20dp" 
+               android:paddingRight="5dp" 
+               android:paddingTop="5dp" 
+               android:paddingBottom="5dp" 
+               android:gravity="left" 
+               android:layout_weight="0.29" 
+               android:textColor="#696969">
+               
+           </TextView>
 
-            
-  <TextView android:layout_gravity="left" android:layout_width="wrap_content" android:text="Date" android:layout_height="wrap_content" 
-               android:id="@+id/date" android:paddingLeft="20dp" android:paddingRight="5dp" android:paddingTop="5dp" android:paddingBottom="5dp" 
-               android:gravity="left" android:layout_weight="0.29" android:textColor="#696969"></TextView> 
+           <TextView 
+               android:layout_gravity="left" 
+               android:layout_width="wrap_content" 
+               android:text="Date" 
+               android:layout_height="wrap_content" 
+               android:id="@+id/date" 
+               android:paddingLeft="20dp" 
+               android:paddingRight="5dp" 
+               android:paddingTop="5dp" 
+               android:paddingBottom="5dp" 
+               android:gravity="left" 
+               android:layout_weight="0.29" 
+               android:textColor="#696969">
+               
+           </TextView> 
+           
 </LinearLayout>

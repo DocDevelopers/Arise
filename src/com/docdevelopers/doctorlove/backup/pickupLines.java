@@ -66,7 +66,7 @@ public class pickupLines extends Activity {
 			}
 			else{
 				AlertDialog.Builder ad=new AlertDialog.Builder(this);
-				ad.setMessage("Nigga get some internet!!!");
+				ad.setMessage("Check your internet connection");
 				ad.show();
 			}
 		}
