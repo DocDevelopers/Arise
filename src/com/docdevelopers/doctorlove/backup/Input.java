@@ -18,7 +18,7 @@ import android.widget.Toast;
 public class Input extends Activity implements OnClickListener {
 //Variables 
 Button calculate;
-EditText first,secon;
+EditText first,second;
 String man,girl,name_one,name_two;
 
     /** Called when the activity is first created. */
