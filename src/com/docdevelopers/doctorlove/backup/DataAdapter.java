@@ -5,6 +5,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView; 
+
+//Organizes Data
 public class DataAdapter extends BaseAdapter {
 	Context mContext; 
 	
@@ -47,7 +49,7 @@ public class DataAdapter extends BaseAdapter {
 		}
 
 		try {
-
+			//Put data into layout
 			holder.line.setText(line[position]);
 			holder.author.setText("By:"+author[position]);
 			holder.date.setText("Posted On:"+date[position]);

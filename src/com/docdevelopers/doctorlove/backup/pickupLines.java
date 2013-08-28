@@ -33,6 +33,8 @@ import android.widget.Toast;
 	Doctor Love By Francisco Castellanos
  */
 public class pickupLines extends Activity {
+	
+	//Variables
 	JSONArray jArray;
 	String result = null;
 	InputStream is = null;
@@ -42,11 +44,11 @@ public class pickupLines extends Activity {
 	ArrayList<String> adate = new ArrayList<String>();
 	ArrayList<String> alikes = new ArrayList<String>();
 	Random generator = new Random();
-	
 	String line,author,date;
-	
 	int responseCode;
 	@Override
+	
+	//Runs when you launch
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.demo);
@@ -66,11 +68,14 @@ public class pickupLines extends Activity {
 			
 		} 
 		
+		//check internet 
 		try{
-			//check internet 
+			
 			if(isNetworkAvailable()==true ){
 				new LoadData().execute();
 			}
+			
+			//If internet is not avaliable
 			else{
 				
 				//Show error Dialog
@@ -84,13 +89,15 @@ public class pickupLines extends Activity {
 		}
 	}
 	
+	
+	//Pull Data
 	private class LoadData extends AsyncTask<Void, Void, Void> { 
 		
 		private ProgressDialog progressDialog;  
 		@Override
 		// can use UI thread here
 		protected void onPreExecute() {
-			
+			//Show Progress Dialog
 			this.progressDialog = ProgressDialog.show(pickupLines.this, "","Fetching Pickup line...");  
 		}
 		@Override
@@ -103,6 +110,8 @@ public class pickupLines extends Activity {
 	 				//Hide progress dialog
 	 				this.progressDialog.dismiss();
 	 				//set adapter
+	 				
+	 				//Set adapter; send data to The DataAdapter Class
 				    listview.setAdapter(new DataAdapter(pickupLines.this,al.toArray(new String[al.size()]), al1.toArray(new String[al1.size()]), adate.toArray(new String[adate.size()])));
 				     
 				}
@@ -125,6 +134,8 @@ public class pickupLines extends Activity {
 						
 						
 						try{
+							
+							//Pull Data
 							HttpPost httppost = new HttpPost("http://pickup.docdevelopers.com/linepull.php");
 							httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 							HttpResponse response = httpclient.execute(httppost);
@@ -138,6 +149,7 @@ public class pickupLines extends Activity {
 						
 						//buffered reader
 						try{
+							
 							BufferedReader reader = new BufferedReader(new InputStreamReader(is, "iso-8859-1"), 80);
 							sb = new StringBuilder();
 							sb.append(reader.readLine() + "\n");
@@ -154,6 +166,8 @@ public class pickupLines extends Activity {
 						catch(Exception e){
 							Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
 						}
+						
+						//Parse JSON data
 						try{
 						jArray = new JSONArray(result);
 						JSONObject json_data = null;
