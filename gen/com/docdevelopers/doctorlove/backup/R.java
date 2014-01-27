@@ -8,56 +8,111 @@
 package com.docdevelopers.doctorlove.backup;
 
 public final class R {
+    public static final class array {
+        /**  Nav Drawer List Item Icons 
+ Keep them in order as the titles are in 
+         */
+        public static final int nav_drawer_icons=0x7f060001;
+        /**  Nav Drawer Menu Items 
+         */
+        public static final int nav_drawer_items=0x7f060000;
+    }
     public static final class attr {
     }
     public static final class color {
-        public static final int Yellow=0x7f050002;
-        public static final int light=0x7f050000;
-        public static final int white=0x7f050001;
+        public static final int Yellow=0x7f040008;
+        public static final int counter_text_bg=0x7f040004;
+        public static final int counter_text_color=0x7f040005;
+        public static final int light=0x7f040006;
+        public static final int list_background=0x7f040001;
+        public static final int list_background_pressed=0x7f040002;
+        public static final int list_divider=0x7f040003;
+        public static final int list_item_title=0x7f040000;
+        public static final int white=0x7f040007;
     }
     public static final class drawable {
-        public static final int doctor_love=0x7f020000;
-        public static final int empty_heart=0x7f020001;
-        public static final int heart=0x7f020002;
-        public static final int heart_roll=0x7f020003;
-        public static final int heartbutton=0x7f020004;
-        public static final int heartchance=0x7f020005;
-        public static final int helpbut=0x7f020006;
-        public static final int ic_action_search=0x7f020007;
-        public static final int ic_launcher=0x7f020008;
-        public static final int logo=0x7f020009;
-        public static final int retry=0x7f02000a;
-        public static final int retry_design=0x7f02000b;
-        public static final int retry_roll=0x7f02000c;
-        public static final int why=0x7f02000d;
-        public static final int why_roll=0x7f02000e;
+        public static final int counter_bg=0x7f020000;
+        public static final int doctor_love=0x7f020001;
+        public static final int empty_heart=0x7f020002;
+        public static final int heart=0x7f020003;
+        public static final int heart_roll=0x7f020004;
+        public static final int heartbutton=0x7f020005;
+        public static final int heartchance=0x7f020006;
+        public static final int helpbut=0x7f020007;
+        public static final int ic_action_search=0x7f020008;
+        public static final int ic_communities=0x7f020009;
+        public static final int ic_drawer=0x7f02000a;
+        public static final int ic_home=0x7f02000b;
+        public static final int ic_launcher=0x7f02000c;
+        public static final int ic_pages=0x7f02000d;
+        public static final int ic_people=0x7f02000e;
+        public static final int ic_photos=0x7f02000f;
+        public static final int ic_whats_hot=0x7f020010;
+        public static final int list_item_bg_normal=0x7f020011;
+        public static final int list_item_bg_pressed=0x7f020012;
+        public static final int list_selector=0x7f020013;
+        public static final int logo=0x7f020014;
+        public static final int retry=0x7f020015;
+        public static final int retry_design=0x7f020016;
+        public static final int retry_roll=0x7f020017;
+        public static final int why=0x7f020018;
+        public static final int why_roll=0x7f020019;
     }
     public static final class id {
-        public static final int author=0x7f070001;
-        public static final int date=0x7f070002;
-        public static final int line=0x7f070000;
-        public static final int linearLayout1=0x7f070003;
-        public static final int listView1=0x7f070004;
+        public static final int First_name=0x7f090007;
+        public static final int TextView01=0x7f090010;
+        public static final int action_refresh=0x7f090013;
+        public static final int action_settings=0x7f090012;
+        public static final int author=0x7f09000b;
+        public static final int counter=0x7f090005;
+        public static final int date=0x7f09000d;
+        public static final int drawer_layout=0x7f090000;
+        public static final int frame_container=0x7f090001;
+        public static final int heart_button=0x7f090009;
+        public static final int heart_logo=0x7f090006;
+        public static final int heartpercent=0x7f09000e;
+        public static final int icon=0x7f090003;
+        public static final int line=0x7f09000c;
+        public static final int linesList=0x7f09000a;
+        public static final int list_slidermenu=0x7f090002;
+        public static final int retry=0x7f09000f;
+        public static final int second_name=0x7f090008;
+        public static final int title=0x7f090004;
+        public static final int updates=0x7f090011;
     }
     public static final class layout {
-        public static final int customgrid=0x7f030000;
-        public static final int demo=0x7f030001;
+        public static final int activity_main=0x7f030000;
+        public static final int drawer_list_item=0x7f030001;
+        public static final int frag1=0x7f030002;
+        public static final int frag2=0x7f030003;
+        public static final int list_item=0x7f030004;
+        public static final int result=0x7f030005;
+        public static final int splash=0x7f030006;
+    }
+    public static final class menu {
+        public static final int frag2_menu=0x7f080000;
+        public static final int main=0x7f080001;
     }
     public static final class string {
-        public static final int app_name=0x7f040000;
-        public static final int boxtitle=0x7f040006;
-        public static final int boxtitle2=0x7f040007;
-        public static final int dedicated=0x7f040003;
-        public static final int hint=0x7f040001;
-        public static final int lovemessage=0x7f040004;
-        public static final int percent=0x7f040002;
-        public static final int results=0x7f04000b;
-        public static final int splash=0x7f04000a;
-        public static final int title=0x7f040005;
-        public static final int title_activity_input=0x7f040009;
-        public static final int updates=0x7f040008;
+        public static final int app_name=0x7f050000;
+        public static final int boxtitle=0x7f050006;
+        public static final int boxtitle2=0x7f050007;
+        public static final int dedicated=0x7f050003;
+        /**  Content Description 
+         */
+        public static final int desc_list_item_icon=0x7f05000e;
+        public static final int drawer_close=0x7f05000d;
+        public static final int drawer_open=0x7f05000c;
+        public static final int hint=0x7f050001;
+        public static final int lovemessage=0x7f050004;
+        public static final int percent=0x7f050002;
+        public static final int results=0x7f05000b;
+        public static final int splash=0x7f05000a;
+        public static final int title=0x7f050005;
+        public static final int title_activity_input=0x7f050009;
+        public static final int updates=0x7f050008;
     }
     public static final class style {
-        public static final int AppTheme=0x7f060000;
+        public static final int AppTheme=0x7f070000;
     }
 }

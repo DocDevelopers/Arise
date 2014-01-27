@@ -13,10 +13,28 @@
     <string name="boxtitle">Enter Your Name:</string>
      <string name="boxtitle2">Enter Your Lovers Name:</string>
   
-    <string name="updates">Facebook Integration Coming This Week!!!</string>
+    <string name="updates">Check out the new pick up lines feature.</string>
     <color name="Yellow">#FFE303</color>
     <string name="title_activity_input">Input</string>
     <string name="splash">Doctor Love</string>
     <string name="results">Results Activity</string>
+     <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
     
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Compatability</item>
+        <item >Pick Up Lines</item>
+        
+    </string-array>
+    
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_people</item>
+    </array>
+    
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
 </resources>

@@ -4,8 +4,8 @@
     android:versionName="5.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -15,14 +15,16 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
        
-        <activity android:name="com.docdevelopers.doctorlove.backup.pickupLines" android:label="@string/app_name">
-            
-              <intent-filter>
+        
+        <activity android:name="com.docdevelopers.doctorlove.backup.Splash" android:label="@string/app_name">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+         <activity android:name="com.docdevelopers.doctorlove.backup.MainActivity"></activity>
+        
     </application>
 
 </manifest>
