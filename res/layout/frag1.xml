@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/light"
+    android:gravity="center"
+    android:imeOptions="actionNext"
+    android:orientation="vertical"
+    android:singleLine="true" >
+
+    <!-- This Way Of Commenting is the same as HTML!!! -->
+
+    <Button
+        android:id="@+id/heart_logo"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/logo" />
+
+    <!-- Enter Your Name: Title -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="29dp"
+        android:gravity="left"
+        android:text="@string/boxtitle"
+        android:textColor="#000000"
+        android:textSize="20sp" >
+    </TextView>
+    <!-- Enter Your Name: Title -->
+
+
+    <!-- First Box -->
+
+    <EditText
+        android:id="@+id/First_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center"
+        android:layout_marginBottom="15dp"
+        android:hint="@string/hint"
+        android:singleLine="true" />
+
+    <!-- Enter Lovers Name: Title -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="29dp"
+        android:gravity="left"
+        android:text="@string/boxtitle2"
+        android:textColor="#000000"
+        android:textSize="20sp" >
+    </TextView>
+    <!-- Enter Lovers Name -->
+
+
+    <!-- Second Box -->
+
+    <EditText
+        android:id="@+id/second_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center"
+        android:hint="@string/hint"
+        android:singleLine="true" />
+    <!-- Second Box -->
+
+
+    <!-- Calculate Button -->
+
+    <Button
+        android:id="@+id/heart_button"
+        android:layout_width="112dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/heartbutton" />
+
+    <!-- Calculate Button -->
+
+</LinearLayout>
