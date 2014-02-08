@@ -1,4 +1,8 @@
-package com.docdevelopers.doctorlove.backup;
+package com.docdevelopers.doctorlove.backup.fragments;
+
+import com.docdevelopers.doctorlove.backup.R;
+import com.docdevelopers.doctorlove.backup.R.id;
+import com.docdevelopers.doctorlove.backup.R.layout;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -12,7 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class frag1 extends Fragment {
+public class Calculate extends Fragment {
 	//Variables 
 	Button calculate;
 	EditText first,second;
@@ -28,6 +32,7 @@ public class frag1 extends Fragment {
   
         //Heart Button
         calculate = (Button) view.findViewById(R.id.heart_button);
+        //calculate.setBackgroundColor(getResources().getColor(R.color.green));
         first= (EditText) view.findViewById(R.id.First_name);
         second = (EditText) view.findViewById(R.id.second_name);
         

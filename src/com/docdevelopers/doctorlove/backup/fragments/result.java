@@ -1,6 +1,10 @@
-package com.docdevelopers.doctorlove.backup;
+package com.docdevelopers.doctorlove.backup.fragments;
 
 import java.util.Random;
+
+import com.docdevelopers.doctorlove.backup.R;
+import com.docdevelopers.doctorlove.backup.R.id;
+import com.docdevelopers.doctorlove.backup.R.layout;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -9,11 +13,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class result extends Fragment {
 	int count,percent;
-	Button Big_Heart,retry;
+	Button retry;
 	Random getrandom =new Random();
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -21,8 +26,8 @@ public class result extends Fragment {
 
         // setting The view for the activity as a variable
         View view = inflater.inflate(R.layout.result,container,false);
-        final Button chance = (Button) view.findViewById(R.id.heartpercent);
-        final Button retry= (Button) view.findViewById(R.id.retry);
+        final TextView chance = (TextView) view.findViewById(R.id.heartpercent);
+        final Button retry = (Button) view.findViewById(R.id.retry);
         
         
         
@@ -65,7 +70,7 @@ public class result extends Fragment {
                                         {
                                         	 FragmentManager fragmentManager = getFragmentManager();
                                  			fragmentManager.beginTransaction()
-                                 					.replace(R.id.frame_container, new frag1()).commit();
+                                 					.replace(R.id.frame_container, new Calculate()).commit();
                                         }	
                                     });
                            

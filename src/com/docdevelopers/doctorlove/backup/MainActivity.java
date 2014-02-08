@@ -1,8 +1,11 @@
 package com.docdevelopers.doctorlove.backup;
 
 import java.util.ArrayList;
-import com.docdevelopers.doctorlove.backup.NavDrawerListAdapter;
-import com.docdevelopers.doctorlove.backup.NavDrawerItem;
+
+import com.docdevelopers.doctorlove.backup.adapters.NavDrawerItem;
+import com.docdevelopers.doctorlove.backup.adapters.NavDrawerListAdapter;
+import com.docdevelopers.doctorlove.backup.fragments.Calculate;
+import com.docdevelopers.doctorlove.backup.fragments.Lines;
 
 
 import android.app.Activity;
@@ -138,7 +141,7 @@ public class MainActivity extends Activity {
 		case R.id.action_refresh:
 			FragmentManager fragmentManager = getFragmentManager();
 			fragmentManager.beginTransaction()
-					.replace(R.id.frame_container, new frag2()).commit();
+					.replace(R.id.frame_container, new Lines()).commit();
 		default:
 			return super.onOptionsItemSelected(item);
 		}
@@ -163,10 +166,10 @@ public class MainActivity extends Activity {
 		Fragment fragment = null;
 		switch (position) {
 		case 0:
-			fragment = new frag1();
+			fragment = new Calculate();
 			break;
 		case 1:
-			fragment = new frag2();
+			fragment = new Lines();
 			break;
 	
 		default:

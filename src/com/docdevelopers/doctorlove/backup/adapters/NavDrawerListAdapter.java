@@ -1,7 +1,9 @@
-package com.docdevelopers.doctorlove.backup;
+package com.docdevelopers.doctorlove.backup.adapters;
 
 import com.docdevelopers.doctorlove.backup.R;
-import com.docdevelopers.doctorlove.backup.NavDrawerItem;
+import com.docdevelopers.doctorlove.backup.R.id;
+import com.docdevelopers.doctorlove.backup.R.layout;
+import com.docdevelopers.doctorlove.backup.adapters.NavDrawerItem;
 
 import java.util.ArrayList;
 

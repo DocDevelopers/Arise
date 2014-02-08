@@ -1,4 +1,4 @@
-package com.docdevelopers.doctorlove.backup;
+package com.docdevelopers.doctorlove.backup.fragments;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,6 +6,11 @@ import java.util.HashMap;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.docdevelopers.doctorlove.backup.R;
+import com.docdevelopers.doctorlove.backup.R.id;
+import com.docdevelopers.doctorlove.backup.R.layout;
+import com.docdevelopers.doctorlove.backup.data.Puller;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -22,7 +27,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-public class frag2 extends Fragment 
+public class Lines extends Fragment 
 {
 	private ProgressDialog pDialog;
 	private static String url = "http://pickup.docdevelopers.com/linepull.php";

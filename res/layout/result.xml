@@ -1,28 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/light"
     android:gravity="center"
     android:orientation="vertical" >
-
-    <Button
-        android:id="@+id/heartpercent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/heartchance"
-        android:clickable="false"
-        android:text="@string/percent"
-        android:textColor="@color/white"
-        android:textSize="75sp" />
-
+	
+    <FrameLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:gravity="center">
+    
+        <ImageView
+            android:id="@+id/heart"
+		    android:contentDescription="Heart container for percentage."
+		    android:src="@drawable/heart"
+			android:layout_width="wrap_content"  
+			android:layout_height="wrap_content"
+			 android:layout_gravity = "center_horizontal"  
+		  	android:adjustViewBounds="true"  
+		  	android:maxWidth="350dp"  
+		  	android:maxHeight="350dp"
+			
+		  	android:scaleType="fitCenter"  >
+		</ImageView>	
+		
+        <TextView
+	        android:layout_gravity="center_vertical|center_horizontal"
+	        android:layout_marginBottom="55sp"
+	    	android:layout_width = "wrap_content"
+	    	android:layout_height = "wrap_content"
+	    	android:text = "Chance:"
+	    	android:textColor = "@color/white"
+	    	android:textSize = "50sp">
+        </TextView>
+        <TextView
+	        android:id = "@+id/heartpercent"
+	        android:layout_gravity="center_vertical|center_horizontal"
+	    	android:layout_width = "wrap_content"
+	    	android:layout_height = "wrap_content"
+	    	android:text = "@string/percent"
+	    	android:textColor = "@color/white"
+	    	android:textSize = "75sp">
+            
+        </TextView>
+        
+       "
+   
+        
+    </FrameLayout>
+    
     <Button
         android:id="@+id/retry"
-        android:layout_width="65dp"
-        android:layout_height="82dp"
+        android:layout_width="185dp"
+        android:layout_height="51dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/retry_design"
+        android:background="@drawable/doc_retry"
         android:clickable="true" />
 
 </LinearLayout>

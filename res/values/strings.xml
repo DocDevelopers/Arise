@@ -5,6 +5,7 @@
 <string name="app_name">Doctor Love</string>
 <color name="light">#D3D3D3</color>
 <color name="white">#FFFFFF</color>
+ <color name="green">#00A550</color>
 <string name="hint">Enter Name:</string>
 <string name="percent">0%</string>
 <string name="dedicated">This APP is dedicated to Jaila Satchell.&lt;3</string>

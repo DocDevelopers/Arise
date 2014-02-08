@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -10,13 +11,19 @@
 
     <!-- This Way Of Commenting is the same as HTML!!! -->
 
-    <Button
-        android:id="@+id/heart_logo"
-        android:layout_width="225dp"
-        android:layout_height="225dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/logo" />
-
+	<ImageView 
+	    android:id="@+id/heart_logo"
+	    android:contentDescription="Logo for calculate page."
+	    android:src="@drawable/logo"
+		android:layout_width="wrap_content"  
+		android:layout_height="wrap_content"  
+	  	android:adjustViewBounds="true"  
+	  	android:maxWidth="250dp"  
+	  	android:maxHeight="250dp"
+		android:layout_marginBottom="30dp"
+	  	android:scaleType="fitCenter"  
+	    
+	    />
     <!-- Enter Your Name: Title -->
 
     <TextView
@@ -74,10 +81,13 @@
 
     <Button
         android:id="@+id/heart_button"
-        android:layout_width="112dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/heartbutton" />
+        android:layout_width="185dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/doc_calculate" 
+       
+      
+        />
 
     <!-- Calculate Button -->
 

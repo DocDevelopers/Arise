@@ -3,10 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     
    <item android:state_pressed="true"
-       android:drawable="@drawable/heart_roll"></item>
+       android:drawable="@drawable/calculate_pressed"></item>
     
     
-    <item android:drawable="@drawable/heart"></item>
+    <item android:drawable="@drawable/calculate"></item>
     
     
     
