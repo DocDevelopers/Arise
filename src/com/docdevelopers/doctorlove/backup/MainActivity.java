@@ -33,10 +33,15 @@ public class MainActivity extends Activity {
 
 	// used to store app title
 	private CharSequence mTitle;
+	
+	// used to store the current actionBar icon
+	private int mIcon;
 
 	// slide menu items
 	private String[] navMenuTitles;
-	private TypedArray navMenuIcons;
+	
+	//Menu Icons
+	private TypedArray navMenuIcons, actionBarIcons;
 
 	private ArrayList<NavDrawerItem> navDrawerItems;
 	private NavDrawerListAdapter adapter;
@@ -52,24 +57,23 @@ public class MainActivity extends Activity {
 		navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
 
 		// nav drawer icons from resources
-		navMenuIcons = getResources()
-				.obtainTypedArray(R.array.nav_drawer_icons);
-
+		navMenuIcons = getResources().obtainTypedArray(R.array.nav_drawer_icons);
+		actionBarIcons = getResources().obtainTypedArray(R.array.action_bar_icons);
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
 
 		navDrawerItems = new ArrayList<NavDrawerItem>();
 
 		// adding nav drawer items to array
-		// Home
+		// Compatability
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
-		// Find People
+		// Pickup Lines
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
 		
 		
 
 		// Recycle the typed array
-		navMenuIcons.recycle();
+		//navMenuIcons.recycle();
 
 		mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
 
@@ -89,12 +93,14 @@ public class MainActivity extends Activity {
 		) {
 			public void onDrawerClosed(View view) {
 				getActionBar().setTitle(mTitle);
+				getActionBar().setIcon(mIcon);
 				// calling onPrepareOptionsMenu() to show action bar icons
 				invalidateOptionsMenu();
 			}
 
 			public void onDrawerOpened(View drawerView) {
 				getActionBar().setTitle(mDrawerTitle);
+				getActionBar().setIcon(R.drawable.icon);
 				// calling onPrepareOptionsMenu() to hide action bar icons
 				invalidateOptionsMenu();
 			}
@@ -185,6 +191,14 @@ public class MainActivity extends Activity {
 			mDrawerList.setItemChecked(position, true);
 			mDrawerList.setSelection(position);
 			setTitle(navMenuTitles[position]);
+			if(position == 0)
+			{
+				setIcon(navMenuIcons.getResourceId(position, -1));
+			}
+			else
+			{
+				setIcon(actionBarIcons.getResourceId(0, -1));
+			}
 			mDrawerLayout.closeDrawer(mDrawerList);
 		} else {
 			// error in creating fragment
@@ -196,6 +210,12 @@ public class MainActivity extends Activity {
 	public void setTitle(CharSequence title) {
 		mTitle = title;
 		getActionBar().setTitle(mTitle);
+	}
+	
+	public void setIcon (int image)
+	{
+		mIcon = image;
+		
 	}
 
 	/**

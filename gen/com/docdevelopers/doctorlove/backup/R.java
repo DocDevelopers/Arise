@@ -9,6 +9,9 @@ package com.docdevelopers.doctorlove.backup;
 
 public final class R {
     public static final class array {
+        /**  ActionBar Icons 
+         */
+        public static final int action_bar_icons=0x7f060002;
         /**  Nav Drawer List Item Icons 
  Keep them in order as the titles are in 
          */
@@ -50,14 +53,17 @@ public final class R {
         public static final int ic_people=0x7f02000f;
         public static final int ic_photos=0x7f020010;
         public static final int ic_whats_hot=0x7f020011;
-        public static final int icon=0x7f020012;
-        public static final int list_item_bg_normal=0x7f020013;
-        public static final int list_item_bg_pressed=0x7f020014;
-        public static final int list_selector=0x7f020015;
-        public static final int logo=0x7f020016;
-        public static final int retry=0x7f020017;
-        public static final int retry_pressed=0x7f020018;
-        public static final int rounded_rectangle=0x7f020019;
+        public static final int ico_pickup=0x7f020012;
+        public static final int icon=0x7f020013;
+        public static final int list_item_bg_normal=0x7f020014;
+        public static final int list_item_bg_pressed=0x7f020015;
+        public static final int list_selector=0x7f020016;
+        public static final int logo=0x7f020017;
+        public static final int nav_compatibility=0x7f020018;
+        public static final int nav_pickup=0x7f020019;
+        public static final int retry=0x7f02001a;
+        public static final int retry_pressed=0x7f02001b;
+        public static final int rounded_rectangle=0x7f02001c;
     }
     public static final class id {
         public static final int First_name=0x7f090007;
@@ -115,6 +121,7 @@ public final class R {
         public static final int updates=0x7f050008;
     }
     public static final class style {
-        public static final int AppTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppTheme=0x7f070001;
     }
 }

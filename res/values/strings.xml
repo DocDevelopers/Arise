@@ -32,8 +32,13 @@
     <!-- Nav Drawer List Item Icons -->
     <!-- Keep them in order as the titles are in -->
     <array name="nav_drawer_icons">
-        <item>@drawable/ic_home</item>
-        <item>@drawable/ic_people</item>
+        <item>@drawable/nav_compatibility</item>
+        <item>@drawable/nav_pickup</item>
+    </array>
+    
+    <!-- ActionBar Icons -->
+     <array name="action_bar_icons">
+       <item>@drawable/ico_pickup</item>
     </array>
     
     <!-- Content Description -->
